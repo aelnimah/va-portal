@@ -1,4 +1,4 @@
-export type ServiceType = "visiting-angels" | "babysitting-angels" | "both";
+export type ServiceType = "visiting-angels" | "babysitting-angels";
 
 export type StaffRole = "PSW" | "RN" | "RPN" | "Babysitter";
 

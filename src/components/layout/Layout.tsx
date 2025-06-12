@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Header } from "./Header";
+import { Sidebar } from "./Sidebar";
 
 interface LayoutProps {
   children: ReactNode;
@@ -7,9 +7,11 @@ interface LayoutProps {
 
 export const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-slate-50">
-      <Header />
-      <main className="container mx-auto px-4 py-6">{children}</main>
+    <div className="min-h-screen bg-slate-50 flex">
+      <Sidebar />
+      <main className="flex-1 overflow-auto">
+        <div className="container mx-auto px-6 py-6">{children}</div>
+      </main>
     </div>
   );
 };
