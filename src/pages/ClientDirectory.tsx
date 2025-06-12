@@ -107,7 +107,6 @@ const ClientDirectory = () => {
     "all",
     "visiting-angels",
     "babysitting-angels",
-    "both",
   ];
 
   const filteredClients = mockClients.filter((client) => {
@@ -142,9 +141,8 @@ const ClientDirectory = () => {
     const babysittingAngels = mockClients.filter(
       (c) => c.serviceType === "babysitting-angels",
     ).length;
-    const both = mockClients.filter((c) => c.serviceType === "both").length;
 
-    return { total, visitingAngels, babysittingAngels, both };
+    return { total, visitingAngels, babysittingAngels };
   };
 
   const getServiceTypeLabel = (type: ServiceType | "all") => {
@@ -153,8 +151,6 @@ const ClientDirectory = () => {
         return "Visiting Angels";
       case "babysitting-angels":
         return "Babysitting Angels";
-      case "both":
-        return "Both Services";
       default:
         return "All Services";
     }
@@ -166,8 +162,6 @@ const ClientDirectory = () => {
         return <Heart className="h-4 w-4" />;
       case "babysitting-angels":
         return <Baby className="h-4 w-4" />;
-      case "both":
-        return <Heart className="h-4 w-4" />;
       default:
         return null;
     }
@@ -195,7 +189,7 @@ const ClientDirectory = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="bg-white p-4 rounded-lg border border-slate-200">
             <div className="text-2xl font-bold text-slate-800">
               {stats.total}
@@ -213,12 +207,6 @@ const ClientDirectory = () => {
               {stats.babysittingAngels}
             </div>
             <div className="text-sm text-slate-600">Babysitting Angels</div>
-          </div>
-          <div className="bg-white p-4 rounded-lg border border-slate-200">
-            <div className="text-2xl font-bold text-purple-600">
-              {stats.both}
-            </div>
-            <div className="text-sm text-slate-600">Both Services</div>
           </div>
         </div>
 

@@ -19,10 +19,8 @@ export const ClientCard = ({
   const getServiceIcon = () => {
     if (client.serviceType === "visiting-angels") {
       return <Heart className="h-4 w-4 text-blue-600" />;
-    } else if (client.serviceType === "babysitting-angels") {
-      return <Baby className="h-4 w-4 text-pink-600" />;
     } else {
-      return <Heart className="h-4 w-4 text-purple-600" />;
+      return <Baby className="h-4 w-4 text-pink-600" />;
     }
   };
 
@@ -33,7 +31,7 @@ export const ClientCard = ({
       case "babysitting-angels":
         return "Babysitting Angels";
       default:
-        return "Both Services";
+        return "Visiting Angels";
     }
   };
 
@@ -44,7 +42,7 @@ export const ClientCard = ({
       case "babysitting-angels":
         return "bg-pink-100 text-pink-800";
       default:
-        return "bg-purple-100 text-purple-800";
+        return "bg-blue-100 text-blue-800";
     }
   };
 

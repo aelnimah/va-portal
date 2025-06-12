@@ -42,10 +42,8 @@ export const AppointmentModal = ({
   const getServiceIcon = () => {
     if (appointment.serviceType === "visiting-angels") {
       return <Heart className="h-5 w-5 text-blue-600" />;
-    } else if (appointment.serviceType === "babysitting-angels") {
-      return <Baby className="h-5 w-5 text-pink-600" />;
     } else {
-      return <Heart className="h-5 w-5 text-purple-600" />;
+      return <Baby className="h-5 w-5 text-pink-600" />;
     }
   };
 
@@ -56,7 +54,7 @@ export const AppointmentModal = ({
       case "babysitting-angels":
         return "Babysitting Angels";
       default:
-        return "Combined Services";
+        return "Visiting Angels";
     }
   };
 

@@ -20,17 +20,15 @@ export const AppointmentCard = ({
       case "babysitting-angels":
         return "bg-pink-50 border-pink-200 hover:bg-pink-100";
       default:
-        return "bg-purple-50 border-purple-200 hover:bg-purple-100";
+        return "bg-blue-50 border-blue-200 hover:bg-blue-100";
     }
   };
 
   const getServiceIcon = () => {
     if (appointment.serviceType === "visiting-angels") {
       return <Heart className="h-4 w-4 text-blue-600" />;
-    } else if (appointment.serviceType === "babysitting-angels") {
-      return <Baby className="h-4 w-4 text-pink-600" />;
     } else {
-      return <Heart className="h-4 w-4 text-purple-600" />;
+      return <Baby className="h-4 w-4 text-pink-600" />;
     }
   };
 
