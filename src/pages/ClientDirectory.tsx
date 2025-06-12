@@ -71,9 +71,9 @@ const mockClients: Client[] = [
     email: "eleanor.martinez@email.com",
     address: "654 Birch Lane, Toronto, ON M9E 5F6",
     lastVisit: new Date(Date.now() - 3 * 24 * 60 * 60 * 1000), // 3 days ago
-    serviceType: "both",
+    serviceType: "visiting-angels",
     notes:
-      "Grandmother who sometimes needs childcare assistance for visiting grandchildren.",
+      "Grandmother who sometimes needs assistance with daily activities when grandchildren visit.",
     emergencyContact: {
       name: "Maria Martinez",
       phone: "(555) 567-8902",
